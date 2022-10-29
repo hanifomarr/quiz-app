@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+:root{
+    --color-primary: #333;
+    --color-sec: #56a5eb;
+    --color-bg1: #ecf5ff;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-primary);
+    background-color: var(--color-bg1);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 5.7rem;
+    color: var(--color-sec);
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+h4 {
+    font-size: 1.3rem;
+}
