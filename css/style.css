@@ -138,4 +138,5 @@ h4 {
  .choice-text{
     padding: 1.5rem;
     background: var(--color-bg2);
+    width: 100%;
  }
