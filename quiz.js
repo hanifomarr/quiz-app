@@ -1,6 +1,7 @@
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
-const 
+const questionCounterText = document.getElementById("questionCounterText");
+const scoreText = document.getElementById("scoreText");
 
 let currentQuestion = {};
 let acceptAnswers = false;
@@ -54,6 +55,8 @@ getNewQuestions = () =>{
     }
 
     questionCounter++;
+    questionCounterText.innerText = `${questionCounter}/${MAX_QUESTIONS}`;
+
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
     question.innerText = currentQuestion.question;
@@ -65,6 +68,7 @@ getNewQuestions = () =>{
 
     availableQuestions.splice(questionIndex, 1);
     acceptAnswers = true;
+    console.log(questionCounter);
 };
 
 choices.forEach(choice => {
@@ -77,6 +81,10 @@ choices.forEach(choice => {
 
         const classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect" ;
 
+        if (classToApply == "correct") {
+            incrementScore(CORRECT_BONUS);
+        }
+
         selectedChoice.parentElement.classList.add(classToApply);
         selectedChoice.classList.add(classToApply);
 
@@ -87,6 +95,12 @@ choices.forEach(choice => {
         }, 1000);
     });
 });
+
+incrementScore = num =>{
+    score +=num;
+    scoreText.innerText = score;
+};
+
 startQuiz();
 
 
