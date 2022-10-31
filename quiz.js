@@ -73,11 +73,21 @@ choices.forEach(choice => {
         acceptAnswers = false; 
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset["number"];
-        console.log(selectedAnswer);
-        getNewQuestions();
+
+        const classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect" ;
+
+        selectedChoice.parentElement.classList.add(classToApply);
+        selectedChoice.classList.add(classToApply);
+
+        setTimeout( () => {
+            selectedChoice.parentElement.classList.remove(classToApply);
+            selectedChoice.classList.remove(classToApply);
+            getNewQuestions();
+        }, 1000);
     });
 });
 startQuiz();
 
 
 
+ 

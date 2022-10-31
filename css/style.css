@@ -17,6 +17,8 @@
     --color-sec: #56a5eb;
     --color-bg1: #ecf5ff;
     --color-bg2: white;
+    --color-correct: #BCE29E;
+    --color-incorrect: #FF6464;
 }
 
 h1,
@@ -118,8 +120,8 @@ h4 {
     margin-bottom: 0.5rem;
     width: 100%;
     font-size: 2rem;
-    background: white;
     border: 0.1rem solid rgba(86, 185,235, 0.25);
+    background: var(--color-bg2);
  }
 
  .choice-container:hover{
@@ -137,6 +139,16 @@ h4 {
 
  .choice-text{
     padding: 1.5rem;
-    background: var(--color-bg2);
     width: 100%;
+    background: none;
+ }
+
+ .correct{
+    background-color: var(--color-correct);
+    color: var(--color-bg2)
+ }
+
+ .incorrect{
+    background-color: var(--color-incorrect);
+    color: var(--color-bg2);
  }
