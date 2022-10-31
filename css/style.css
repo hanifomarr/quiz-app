@@ -162,4 +162,18 @@ h4 {
 
  #head-container{
     text-align: center;
+    font-size: 2rem;
+ }
+
+ #progressBar{
+    border: 0.5rem solid var(--color-sec);
+    width: 16rem;
+    height: 4rem;
+    margin-top: 1rem;
+ }
+
+ #progressBarFull{
+    width: 0%;
+    height: 3.4rem;
+    background: var(--color-sec);
  }
