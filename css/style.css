@@ -152,3 +152,14 @@ h4 {
     background-color: var(--color-incorrect);
     color: var(--color-bg2);
  }
+
+ /* Head-Display */
+
+ #head-display{
+    display: flex;
+    justify-content: space-between;
+ }
+
+ #head-container{
+    text-align: center;
+ }
