@@ -202,3 +202,21 @@ input{
     display: flex;
     flex-direction: column;
  }
+
+ #highScoreList{
+    margin-bottom: 1rem;
+ }
+
+ .high-score-item{
+    width: 20rem;
+    padding: 1rem 0.5rem;
+    margin-bottom: 0.6rem;
+    font-size: 1.8rem;
+    background-color: var(--color-bg2);
+    color: var(--color-grey);
+    box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.2);
+ }
+
+ .high-score-item:hover{
+    transform: scale(1.025);
+ }
